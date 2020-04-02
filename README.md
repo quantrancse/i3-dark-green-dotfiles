@@ -46,7 +46,6 @@
 ![screenshot_4](./screenshots/screenshot_4.png?raw=true)
 
 - Stylus Dark Green theme which modified of [Github Moonlight](https://github.com/Brettm12345/github-moonlight)
-<br />
 - File tree extension: [Gitako](https://github.com/EnixCoda/Gitako)
 <br />
 <br />
