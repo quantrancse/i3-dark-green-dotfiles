@@ -1,0 +1,876 @@
+{
+    "nighttab": true,
+    "version": "5.0.0",
+    "state": {
+        "header": {
+            "area": {
+                "width": 80,
+                "justify": "center",
+                "align": "center"
+            },
+            "item": {
+                "justify": "left"
+            },
+            "greeting": {
+                "show": true,
+                "type": "good",
+                "name": "",
+                "size": 2.5,
+                "newLine": true
+            },
+            "clock": {
+                "hours": {
+                    "show": true,
+                    "display": "number"
+                },
+                "minutes": {
+                    "show": true,
+                    "display": "number"
+                },
+                "seconds": {
+                    "show": false,
+                    "display": "number"
+                },
+                "separator": {
+                    "show": true,
+                    "text": ":"
+                },
+                "meridiem": {
+                    "show": true
+                },
+                "hour24": {
+                    "show": true
+                },
+                "size": 1.5,
+                "newLine": true
+            },
+            "transitional": {
+                "show": false,
+                "type": "timeanddate",
+                "size": 1,
+                "newLine": false
+            },
+            "date": {
+                "day": {
+                    "show": true,
+                    "display": "word",
+                    "weekStart": "monday",
+                    "length": "long"
+                },
+                "date": {
+                    "show": true,
+                    "display": "number",
+                    "ordinal": true
+                },
+                "month": {
+                    "show": true,
+                    "display": "word",
+                    "length": "long",
+                    "ordinal": true
+                },
+                "year": {
+                    "show": false,
+                    "display": "number"
+                },
+                "separator": {
+                    "show": true,
+                    "text": "/"
+                },
+                "format": "datemonth",
+                "size": 1.2,
+                "newLine": true
+            },
+            "search": {
+                "show": true,
+                "style": "box",
+                "width": {
+                    "by": "auto",
+                    "size": 30
+                },
+                "focus": false,
+                "engine": {
+                    "selected": "google",
+                    "google": {
+                        "url": "https://www.google.com/search",
+                        "name": "Google"
+                    },
+                    "duckduckgo": {
+                        "url": "https://duckduckgo.com/",
+                        "name": "DuckDuckGo"
+                    },
+                    "youtube": {
+                        "url": "https://www.youtube.com/results?search_query=",
+                        "name": "YouTube"
+                    },
+                    "giphy": {
+                        "url": "https://giphy.com/search/",
+                        "name": "Giphy"
+                    },
+                    "bing": {
+                        "url": "https://www.bing.com/search?q=",
+                        "name": "Bing"
+                    },
+                    "custom": {
+                        "url": "",
+                        "name": ""
+                    }
+                },
+                "text": {
+                    "justify": "center"
+                },
+                "size": 1,
+                "newLine": false,
+                "newTab": false
+            },
+            "editAdd": {
+                "show": true,
+                "size": 1,
+                "style": "box",
+                "newLine": true
+            },
+            "colorAccent": {
+                "dot": {
+                    "show": true
+                },
+                "show": true,
+                "size": 1,
+                "style": "box",
+                "newLine": false
+            },
+            "menu": {
+                "show": true,
+                "size": 1,
+                "style": "box",
+                "newLine": false
+            },
+            "order": [
+                "greeting",
+                "clock",
+                "transitional",
+                "date",
+                "editAdd",
+                "search",
+                "colorAccent",
+                "menu"
+            ],
+            "border": {
+                "top": 0,
+                "bottom": 0
+            },
+            "color": {
+                "by": "theme",
+                "rgb": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "style": "scroll",
+                "opacity": 0.95,
+                "show": true,
+                "newLine": false
+            },
+            "position": "sticky",
+            "radius": false
+        },
+        "link": {
+            "area": {
+                "width": 100,
+                "direction": "ltr",
+                "justify": "center"
+            },
+            "item": {
+                "color": {
+                    "by": "theme",
+                    "rgb": {
+                        "r": 0,
+                        "g": 0,
+                        "b": 0
+                    }
+                },
+                "display": {
+                    "letcon": {
+                        "show": true,
+                        "letter": {
+                            "size": 3
+                        },
+                        "icon": {
+                            "size": 3
+                        }
+                    },
+                    "name": {
+                        "show": true,
+                        "size": 0.9
+                    },
+                    "gutter": 2,
+                    "direction": "vertical",
+                    "order": "letconname",
+                    "alignment": "centercenter",
+                    "rotate": 0,
+                    "translate": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                "url": {
+                    "show": true
+                },
+                "line": {
+                    "show": true
+                },
+                "shadow": {
+                    "show": true
+                },
+                "hoverScale": {
+                    "show": true
+                },
+                "newTab": false,
+                "size": 1,
+                "border": 0
+            },
+            "show": true,
+            "add": false,
+            "edit": false,
+            "style": "block",
+            "orientation": "bottom"
+        },
+        "group": {
+            "area": {
+                "justify": "left"
+            },
+            "name": {
+                "show": true,
+                "size": 1
+            },
+            "openAll": {
+                "show": true,
+                "size": 1,
+                "style": "box"
+            },
+            "border": 0,
+            "order": "headerbody",
+            "add": false,
+            "edit": false
+        },
+        "layout": {
+            "alignment": "centercenter",
+            "order": "headerlink",
+            "direction": "horizontal",
+            "padding": 4,
+            "gutter": 2,
+            "size": 1,
+            "width": 85,
+            "scrollPastEnd": false,
+            "scrollbars": "auto",
+            "title": "New Tab"
+        },
+        "theme": {
+            "accent": {
+                "rgb": {
+                    "r": 48,
+                    "g": 192,
+                    "b": 164
+                },
+                "random": {
+                    "active": false,
+                    "style": "any"
+                },
+                "cycle": {
+                    "active": false,
+                    "speed": 300,
+                    "step": 10
+                }
+            },
+            "color": {
+                "hsl": {
+                    "h": 222,
+                    "s": 14,
+                    "l": 56
+                },
+                "rgb": {
+                    "r": 129,
+                    "g": 138,
+                    "b": 160
+                },
+                "contrast": {
+                    "light": 4,
+                    "dark": 4
+                },
+                "generated": {
+                    "negative": {
+                        "1": {
+                            "r": 117,
+                            "g": 127,
+                            "b": 151
+                        },
+                        "2": {
+                            "r": 107,
+                            "g": 117,
+                            "b": 142
+                        },
+                        "3": {
+                            "r": 98,
+                            "g": 107,
+                            "b": 130
+                        },
+                        "4": {
+                            "r": 89,
+                            "g": 98,
+                            "b": 118
+                        },
+                        "5": {
+                            "r": 80,
+                            "g": 88,
+                            "b": 107
+                        },
+                        "6": {
+                            "r": 72,
+                            "g": 78,
+                            "b": 95
+                        },
+                        "7": {
+                            "r": 63,
+                            "g": 69,
+                            "b": 83
+                        },
+                        "8": {
+                            "r": 54,
+                            "g": 59,
+                            "b": 72
+                        },
+                        "9": {
+                            "r": 45,
+                            "g": 50,
+                            "b": 60
+                        },
+                        "10": {
+                            "r": 37,
+                            "g": 40,
+                            "b": 48
+                        }
+                    },
+                    "positive": {
+                        "1": {
+                            "r": 141,
+                            "g": 149,
+                            "b": 169
+                        },
+                        "2": {
+                            "r": 152,
+                            "g": 160,
+                            "b": 178
+                        },
+                        "3": {
+                            "r": 164,
+                            "g": 170,
+                            "b": 186
+                        },
+                        "4": {
+                            "r": 176,
+                            "g": 181,
+                            "b": 195
+                        },
+                        "5": {
+                            "r": 187,
+                            "g": 192,
+                            "b": 204
+                        },
+                        "6": {
+                            "r": 199,
+                            "g": 203,
+                            "b": 213
+                        },
+                        "7": {
+                            "r": 210,
+                            "g": 214,
+                            "b": 221
+                        },
+                        "8": {
+                            "r": 222,
+                            "g": 224,
+                            "b": 230
+                        },
+                        "9": {
+                            "r": 234,
+                            "g": 235,
+                            "b": 239
+                        },
+                        "10": {
+                            "r": 245,
+                            "g": 246,
+                            "b": 248
+                        }
+                    }
+                }
+            },
+            "font": {
+                "display": {
+                    "name": "Source Code Pro",
+                    "weight": 300,
+                    "style": "normal"
+                },
+                "ui": {
+                    "name": "",
+                    "weight": 300,
+                    "style": "normal"
+                }
+            },
+            "style": "dark",
+            "radius": 0.25,
+            "shadow": 0.75,
+            "shade": {
+                "opacity": 0.4
+            },
+            "custom": {
+                "all": [],
+                "edit": false
+            }
+        },
+        "background": {
+            "color": {
+                "by": "theme",
+                "rgb": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "image": {
+                "show": false,
+                "from": "file",
+                "file": {
+                    "name": "",
+                    "data": ""
+                },
+                "url": "",
+                "blur": 0,
+                "scale": 1,
+                "opacity": 1,
+                "grayscale": 0,
+                "accent": 0
+            }
+        },
+        "edit": false,
+        "pagelock": true,
+        "shade": true,
+        "edge": false,
+        "search": false,
+        "menu": true,
+        "modal": false,
+        "dropdown": false,
+        "autoSuggest": false
+    },
+    "bookmarks": [
+        {
+            "name": {
+                "text": "Social Media",
+                "show": true
+            },
+            "openAll": {
+                "show": false
+            },
+            "items": [
+                {
+                    "display": "icon",
+                    "letter": "F",
+                    "icon": {
+                        "name": "facebook-square",
+                        "prefix": "fab",
+                        "label": "Facebook Square"
+                    },
+                    "name": "Facebook",
+                    "url": "https://www.facebook.com/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585725659153
+                },
+                {
+                    "display": "icon",
+                    "letter": null,
+                    "icon": {
+                        "name": "facebook-messenger",
+                        "prefix": "fab",
+                        "label": "Facebook Messenger"
+                    },
+                    "name": "Messenger",
+                    "url": "https://www.messenger.com/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585725741122
+                },
+                {
+                    "display": "icon",
+                    "letter": null,
+                    "icon": {
+                        "name": "instagram",
+                        "prefix": "fab",
+                        "label": "Instagram"
+                    },
+                    "name": "Instagram",
+                    "url": "https://www.instagram.com/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585725777254
+                },
+                {
+                    "display": "icon",
+                    "letter": null,
+                    "icon": {
+                        "name": "youtube",
+                        "prefix": "fab",
+                        "label": "YouTube"
+                    },
+                    "name": "YouTube",
+                    "url": "https://www.youtube.com/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585726424160
+                },
+                {
+                    "display": "icon",
+                    "letter": "R",
+                    "icon": {
+                        "name": "reddit-alien",
+                        "prefix": "fab",
+                        "label": "reddit Alien"
+                    },
+                    "name": "Reddit",
+                    "url": "https://www.reddit.com/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1546453111491
+                },
+                {
+                    "display": "icon",
+                    "letter": null,
+                    "icon": {
+                        "name": "spider",
+                        "prefix": "fas",
+                        "label": "Spider"
+                    },
+                    "name": "Spiderum",
+                    "url": "https://spiderum.com/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585726513328
+                }
+            ]
+        },
+        {
+            "name": {
+                "text": "News",
+                "show": true
+            },
+            "openAll": {
+                "show": true
+            },
+            "items": [
+                {
+                    "display": "letter",
+                    "letter": "E",
+                    "icon": {
+                        "name": null,
+                        "prefix": null,
+                        "label": null
+                    },
+                    "name": "VnExpress",
+                    "url": "https://vnexpress.net/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585725885283
+                },
+                {
+                    "display": "icon",
+                    "letter": null,
+                    "icon": {
+                        "name": "cog",
+                        "prefix": "fas",
+                        "label": "cog"
+                    },
+                    "name": "TECHRUM",
+                    "url": "https://www.techrum.vn/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585725999374
+                },
+                {
+                    "display": "icon",
+                    "letter": null,
+                    "icon": {
+                        "name": "leaf",
+                        "prefix": "fas",
+                        "label": "leaf"
+                    },
+                    "name": "Tinhte",
+                    "url": "https://tinhte.vn/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585726048248
+                }
+            ]
+        },
+        {
+            "name": {
+                "text": "Google",
+                "show": true
+            },
+            "openAll": {
+                "show": false
+            },
+            "items": [
+                {
+                    "display": "icon",
+                    "letter": "GM",
+                    "icon": {
+                        "name": "envelope",
+                        "prefix": "fas",
+                        "label": "Envelope"
+                    },
+                    "name": "Gmail",
+                    "url": "https://mail.google.com/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1546453110265
+                },
+                {
+                    "display": "icon",
+                    "letter": "DR",
+                    "icon": {
+                        "name": "google-drive",
+                        "prefix": "fab",
+                        "label": "Google Drive"
+                    },
+                    "name": "Drive",
+                    "url": "https://drive.google.com/drive/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1546453111953
+                },
+                {
+                    "display": "icon",
+                    "letter": null,
+                    "icon": {
+                        "name": "lightbulb",
+                        "prefix": "fas",
+                        "label": "Lightbulb"
+                    },
+                    "name": "Keep",
+                    "url": "https://keep.google.com/u/0/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585726621233
+                }
+            ]
+        },
+        {
+            "name": {
+                "text": "Dev sites",
+                "show": true
+            },
+            "openAll": {
+                "show": true
+            },
+            "items": [
+                {
+                    "display": "icon",
+                    "letter": "GIT",
+                    "icon": {
+                        "name": "github",
+                        "prefix": "fab",
+                        "label": "GitHub"
+                    },
+                    "name": "Github",
+                    "url": "https://github.com/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1546453108926
+                },
+                {
+                    "display": "icon",
+                    "letter": "DEV",
+                    "icon": {
+                        "name": "code",
+                        "prefix": "fas",
+                        "label": "Code"
+                    },
+                    "name": "Devdocs",
+                    "url": "http://devdocs.io/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1546453101749
+                },
+                {
+                    "display": "icon",
+                    "letter": "AS",
+                    "icon": {
+                        "name": "dice-d20",
+                        "prefix": "fas",
+                        "label": "Dice D20"
+                    },
+                    "name": "awesomeSheet",
+                    "url": "https://zombiefox.github.io/awesomeSheet/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1546453104010
+                }
+            ]
+        },
+        {
+            "name": {
+                "text": "HCMUT",
+                "show": true
+            },
+            "openAll": {
+                "show": false
+            },
+            "items": [
+                {
+                    "display": "letter",
+                    "letter": "BKeL",
+                    "icon": {
+                        "name": null,
+                        "prefix": null,
+                        "label": null
+                    },
+                    "name": "E-Learning",
+                    "url": "http://e-learning.hcmut.edu.vn/my/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585726725182
+                },
+                {
+                    "display": "letter",
+                    "letter": "MyBK",
+                    "icon": {
+                        "name": null,
+                        "prefix": null,
+                        "label": null
+                    },
+                    "name": null,
+                    "url": "https://mybk.hcmut.edu.vn/stinfo/",
+                    "accent": {
+                        "override": false,
+                        "color": {
+                            "r": null,
+                            "g": null,
+                            "b": null
+                        }
+                    },
+                    "searchMatch": false,
+                    "timeStamp": 1585726801553
+                }
+            ]
+        }
+    ]
+}
