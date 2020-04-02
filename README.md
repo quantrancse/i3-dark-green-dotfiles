@@ -40,7 +40,6 @@
 
 - Homepage extension: [nightTab](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki?hl=en-GB)
 <br />
-<br />
 
 ### Github
 ![screenshot_4](./screenshots/screenshot_4.png?raw=true)
@@ -48,13 +47,11 @@
 - Stylus Dark Green theme which modified of [Github Moonlight](https://github.com/Brettm12345/github-moonlight)
 - File tree extension: [Gitako](https://github.com/EnixCoda/Gitako)
 <br />
-<br />
 
 ### ncmpcpp, cava, Spotify
 ![screenshot_5](./screenshots/screenshot_5.png?raw=true)
 
 - Spotify theme modified by [Spicetify](https://github.com/khanhas/spicetify-cli)
-<br />
 <br />
 
 ### tiling layout
@@ -62,7 +59,6 @@
 
 - shell: [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) with [Spaceship Zsh](https://github.com/denysdovhan/spaceship-prompt) prompt
 - plugins: [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), [autojump](https://github.com/wting/autojump)
-<br />
 <br />
 
 
