@@ -96,4 +96,4 @@
 - All rofi menus are modified of [rofi-menus](https://gitlab.com/vahnrr/rofi-menus)
 
 ### Notes 
-- Some needed packages: nerd-fonts-complete, ttf-font-awesome.
+- Some needed packages: nerd-fonts-complete, ttf-fantasque-sans-mono, ttf-font-awesome.
