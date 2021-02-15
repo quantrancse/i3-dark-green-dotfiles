@@ -1,6 +1,6 @@
 {
     "nighttab": true,
-    "version": "5.0.0",
+    "version": "6.1.1",
     "state": {
         "header": {
             "area": {
@@ -82,7 +82,6 @@
             },
             "search": {
                 "show": true,
-                "style": "box",
                 "width": {
                     "by": "auto",
                     "size": 30
@@ -112,7 +111,8 @@
                     },
                     "custom": {
                         "url": "",
-                        "name": ""
+                        "name": "",
+                        "queryName": ""
                     }
                 },
                 "text": {
@@ -120,13 +120,14 @@
                 },
                 "size": 1,
                 "newLine": false,
-                "newTab": false
+                "newTab": false,
+                "opacity": 1
             },
             "editAdd": {
                 "show": true,
                 "size": 1,
-                "style": "box",
-                "newLine": true
+                "newLine": true,
+                "opacity": 1
             },
             "colorAccent": {
                 "dot": {
@@ -134,14 +135,14 @@
                 },
                 "show": true,
                 "size": 1,
-                "style": "box",
-                "newLine": false
+                "newLine": false,
+                "opacity": 1
             },
             "menu": {
                 "show": true,
                 "size": 1,
-                "style": "box",
-                "newLine": false
+                "newLine": false,
+                "opacity": 1
             },
             "order": [
                 "greeting",
@@ -167,7 +168,12 @@
                 "style": "scroll",
                 "opacity": 0.95,
                 "show": true,
-                "newLine": false
+                "newLine": false,
+                "hsl": {
+                    "h": 0,
+                    "s": 0,
+                    "l": 0
+                }
             },
             "position": "sticky",
             "radius": false
@@ -180,35 +186,46 @@
             },
             "item": {
                 "color": {
-                    "by": "theme",
+                    "hsl": {
+                        "h": 0,
+                        "s": 0,
+                        "l": 0
+                    },
                     "rgb": {
                         "r": 0,
                         "g": 0,
                         "b": 0
-                    }
+                    },
+                    "opacity": 1,
+                    "by": "theme"
                 },
                 "display": {
-                    "letcon": {
-                        "show": true,
-                        "letter": {
-                            "size": 3
-                        },
-                        "icon": {
-                            "size": 3
-                        }
-                    },
                     "name": {
                         "show": true,
                         "size": 0.9
                     },
                     "gutter": 2,
                     "direction": "vertical",
-                    "order": "letconname",
+                    "order": "visualname",
                     "alignment": "centercenter",
                     "rotate": 0,
                     "translate": {
                         "x": 0,
                         "y": 0
+                    },
+                    "visual": {
+                        "letter": {
+                            "size": 3
+                        },
+                        "icon": {
+                            "size": 3
+                        },
+                        "image": {
+                            "size": 3
+                        },
+                        "shadow": {
+                            "size": 0
+                        }
                     }
                 },
                 "url": {
@@ -225,13 +242,30 @@
                 },
                 "newTab": false,
                 "size": 1,
-                "border": 0
+                "border": 0,
+                "accent": {
+                    "hsl": {
+                        "h": 0,
+                        "s": 0,
+                        "l": 0
+                    },
+                    "rgb": {
+                        "r": 0,
+                        "g": 0,
+                        "b": 0
+                    },
+                    "by": "theme"
+                },
+                "background": {
+                    "opacity": 1
+                }
             },
             "show": true,
             "add": false,
             "edit": false,
             "style": "block",
-            "orientation": "bottom"
+            "orientation": "bottom",
+            "breakpoint": "lg"
         },
         "group": {
             "area": {
@@ -244,7 +278,7 @@
             "openAll": {
                 "show": true,
                 "size": 1,
-                "style": "box"
+                "opacity": 1
             },
             "border": 0,
             "order": "headerbody",
@@ -278,6 +312,11 @@
                     "active": false,
                     "speed": 300,
                     "step": 10
+                },
+                "hsl": {
+                    "h": 168.33333333333334,
+                    "s": 60,
+                    "l": 47.05882352941176
                 }
             },
             "color": {
@@ -432,21 +471,37 @@
                     "r": 0,
                     "g": 0,
                     "b": 0
+                },
+                "hsl": {
+                    "h": 0,
+                    "s": 0,
+                    "l": 0
                 }
             },
-            "image": {
+            "visual": {
                 "show": false,
-                "from": "file",
-                "file": {
-                    "name": "",
-                    "data": ""
+                "type": "video",
+                "image": {
+                    "type": "file",
+                    "file": {
+                        "name": "",
+                        "data": ""
+                    },
+                    "url": ""
                 },
-                "url": "",
+                "video": {
+                    "url": ""
+                },
                 "blur": 0,
                 "scale": 1,
                 "opacity": 1,
                 "grayscale": 0,
-                "accent": 0
+                "accent": 0,
+                "vignette": {
+                    "opacity": 0,
+                    "start": 90,
+                    "end": 70
+                }
             }
         },
         "edit": false,
@@ -462,6 +517,181 @@
     "bookmarks": [
         {
             "name": {
+                "text": "HCMUT",
+                "show": true
+            },
+            "openAll": {
+                "show": false
+            },
+            "items": [
+                {
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "letter",
+                            "letter": {
+                                "size": 3,
+                                "text": "BKeL"
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "",
+                                "prefix": "",
+                                "label": ""
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "E-Learning",
+                            "size": 0.9
+                        }
+                    },
+                    "url": "http://e-learning.hcmut.edu.vn/my/",
+                    "accent": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
+                    "searchMatch": false,
+                    "timeStamp": 1585726725182,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
+                },
+                {
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "letter",
+                            "letter": {
+                                "size": 3,
+                                "text": "MyBK"
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "",
+                                "prefix": "",
+                                "label": ""
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "",
+                            "size": 0.9
+                        }
+                    },
+                    "url": "https://mybk.hcmut.edu.vn/stinfo/",
+                    "accent": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
+                    "searchMatch": false,
+                    "timeStamp": 1585726801553,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": {
                 "text": "Social Media",
                 "show": true
             },
@@ -470,130 +700,578 @@
             },
             "items": [
                 {
-                    "display": "icon",
-                    "letter": "F",
-                    "icon": {
-                        "name": "facebook-square",
-                        "prefix": "fab",
-                        "label": "Facebook Square"
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": "F"
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "facebook-square",
+                                "prefix": "fab",
+                                "label": "Facebook Square"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Facebook",
+                            "size": 0.9
+                        }
                     },
-                    "name": "Facebook",
                     "url": "https://www.facebook.com/",
                     "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
                         }
                     },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1585725659153
+                    "timeStamp": 1585725659153,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 },
                 {
-                    "display": "icon",
-                    "letter": null,
-                    "icon": {
-                        "name": "facebook-messenger",
-                        "prefix": "fab",
-                        "label": "Facebook Messenger"
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": ""
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "facebook-messenger",
+                                "prefix": "fab",
+                                "label": "Facebook Messenger"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Messenger",
+                            "size": 0.9
+                        }
                     },
-                    "name": "Messenger",
                     "url": "https://www.messenger.com/",
                     "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
                         }
                     },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1585725741122
+                    "timeStamp": 1585725741122,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 },
                 {
-                    "display": "icon",
-                    "letter": null,
-                    "icon": {
-                        "name": "instagram",
-                        "prefix": "fab",
-                        "label": "Instagram"
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": "GM"
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "envelope",
+                                "prefix": "fas",
+                                "label": "Envelope"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Gmail",
+                            "size": 0.9
+                        }
                     },
-                    "name": "Instagram",
+                    "url": "https://mail.google.com/",
+                    "accent": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
+                    "searchMatch": false,
+                    "timeStamp": 1546453110265,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
+                },
+                {
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": ""
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "instagram",
+                                "prefix": "fab",
+                                "label": "Instagram"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Instagram",
+                            "size": 0.9
+                        }
+                    },
                     "url": "https://www.instagram.com/",
                     "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
                         }
                     },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1585725777254
+                    "timeStamp": 1585725777254,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 },
                 {
-                    "display": "icon",
-                    "letter": null,
-                    "icon": {
-                        "name": "youtube",
-                        "prefix": "fab",
-                        "label": "YouTube"
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": ""
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "youtube",
+                                "prefix": "fab",
+                                "label": "YouTube"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "YouTube",
+                            "size": 0.9
+                        }
                     },
-                    "name": "YouTube",
                     "url": "https://www.youtube.com/",
                     "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
                         }
                     },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1585726424160
+                    "timeStamp": 1585726424160,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 },
                 {
-                    "display": "icon",
-                    "letter": "R",
-                    "icon": {
-                        "name": "reddit-alien",
-                        "prefix": "fab",
-                        "label": "reddit Alien"
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": "R"
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "reddit-alien",
+                                "prefix": "fab",
+                                "label": "reddit Alien"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Reddit",
+                            "size": 0.9
+                        }
                     },
-                    "name": "Reddit",
                     "url": "https://www.reddit.com/",
                     "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
                         }
                     },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1546453111491
+                    "timeStamp": 1546453111491,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 },
                 {
-                    "display": "icon",
-                    "letter": null,
-                    "icon": {
-                        "name": "spider",
-                        "prefix": "fas",
-                        "label": "Spider"
-                    },
-                    "name": "Spiderum",
-                    "url": "https://spiderum.com/",
-                    "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": ""
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "spider",
+                                "prefix": "fas",
+                                "label": "Spider"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Spiderum",
+                            "size": 0.9
                         }
                     },
+                    "url": "https://spiderum.com/",
+                    "accent": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1585726513328
+                    "timeStamp": 1585726513328,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 }
             ]
         },
@@ -603,71 +1281,511 @@
                 "show": true
             },
             "openAll": {
-                "show": true
+                "show": false
             },
             "items": [
                 {
-                    "display": "letter",
-                    "letter": "E",
-                    "icon": {
-                        "name": null,
-                        "prefix": null,
-                        "label": null
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "letter",
+                            "letter": {
+                                "size": 3,
+                                "text": "E"
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "",
+                                "prefix": "",
+                                "label": ""
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "VnExpress",
+                            "size": 0.9
+                        }
                     },
-                    "name": "VnExpress",
                     "url": "https://vnexpress.net/",
                     "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
                         }
                     },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1585725885283
+                    "timeStamp": 1585725885283,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 },
                 {
-                    "display": "icon",
-                    "letter": null,
-                    "icon": {
-                        "name": "cog",
-                        "prefix": "fas",
-                        "label": "cog"
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": ""
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "cog",
+                                "prefix": "fas",
+                                "label": "cog"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "TECHRUM",
+                            "size": 0.9
+                        }
                     },
-                    "name": "TECHRUM",
                     "url": "https://www.techrum.vn/",
                     "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
                         }
                     },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1585725999374
+                    "timeStamp": 1585725999374,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 },
                 {
-                    "display": "icon",
-                    "letter": null,
-                    "icon": {
-                        "name": "leaf",
-                        "prefix": "fas",
-                        "label": "leaf"
-                    },
-                    "name": "Tinhte",
-                    "url": "https://tinhte.vn/",
-                    "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": ""
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "leaf",
+                                "prefix": "fas",
+                                "label": "leaf"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Tinhte",
+                            "size": 0.9
                         }
                     },
+                    "url": "https://tinhte.vn/",
+                    "accent": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1585726048248
+                    "timeStamp": 1585726048248,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": {
+                "text": "Message",
+                "show": true
+            },
+            "openAll": {
+                "show": false
+            },
+            "items": [
+                {
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": ""
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "telegram",
+                                "prefix": "fab",
+                                "label": "Telegram"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Telegram",
+                            "size": 0.9
+                        }
+                    },
+                    "url": "https://web.telegram.org/",
+                    "accent": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
+                    "searchMatch": false,
+                    "timeStamp": 1604660284414,
+                    "background": {
+                        "show": false,
+                        "type": "video",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
+                },
+                {
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": ""
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "skype",
+                                "prefix": "fab",
+                                "label": "Skype"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Skype",
+                            "size": 0.9
+                        }
+                    },
+                    "url": "https://web.skype.com/",
+                    "accent": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
+                    "searchMatch": false,
+                    "timeStamp": 1604660354472,
+                    "background": {
+                        "show": false,
+                        "type": "video",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
+                },
+                {
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "letter",
+                            "letter": {
+                                "size": 3,
+                                "text": "Z"
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": "https://stc-zaloprofile.zdn.vn/pc/v1/images/zalo_sharelogo.png"
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "",
+                                "prefix": "",
+                                "label": ""
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Zalo",
+                            "size": 0.9
+                        }
+                    },
+                    "url": "https://chat.zalo.me/",
+                    "accent": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
+                    "searchMatch": false,
+                    "timeStamp": 1604660245007,
+                    "background": {
+                        "show": false,
+                        "type": "video",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 }
             ]
         },
@@ -681,67 +1799,168 @@
             },
             "items": [
                 {
-                    "display": "icon",
-                    "letter": "GM",
-                    "icon": {
-                        "name": "envelope",
-                        "prefix": "fas",
-                        "label": "Envelope"
-                    },
-                    "name": "Gmail",
-                    "url": "https://mail.google.com/",
-                    "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": "DR"
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "google-drive",
+                                "prefix": "fab",
+                                "label": "Google Drive"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Drive",
+                            "size": 0.9
                         }
                     },
-                    "searchMatch": false,
-                    "timeStamp": 1546453110265
-                },
-                {
-                    "display": "icon",
-                    "letter": "DR",
-                    "icon": {
-                        "name": "google-drive",
-                        "prefix": "fab",
-                        "label": "Google Drive"
-                    },
-                    "name": "Drive",
                     "url": "https://drive.google.com/drive/",
                     "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
                         }
                     },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1546453111953
+                    "timeStamp": 1546453111953,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 },
                 {
-                    "display": "icon",
-                    "letter": null,
-                    "icon": {
-                        "name": "lightbulb",
-                        "prefix": "fas",
-                        "label": "Lightbulb"
-                    },
-                    "name": "Keep",
-                    "url": "https://keep.google.com/u/0/",
-                    "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": ""
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "lightbulb",
+                                "prefix": "fas",
+                                "label": "Lightbulb"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Keep",
+                            "size": 0.9
                         }
                     },
+                    "url": "https://keep.google.com/u/0/",
+                    "accent": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1585726621233
+                    "timeStamp": 1585726621233,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 }
             ]
         },
@@ -755,120 +1974,168 @@
             },
             "items": [
                 {
-                    "display": "icon",
-                    "letter": "GIT",
-                    "icon": {
-                        "name": "github",
-                        "prefix": "fab",
-                        "label": "GitHub"
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": "GIT"
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "github",
+                                "prefix": "fab",
+                                "label": "GitHub"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Github",
+                            "size": 0.9
+                        }
                     },
-                    "name": "Github",
                     "url": "https://github.com/",
                     "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
                         }
                     },
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
+                    },
+                    "wide": false,
+                    "tall": false,
                     "searchMatch": false,
-                    "timeStamp": 1546453108926
+                    "timeStamp": 1546453108926,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
+                        }
+                    }
                 },
                 {
-                    "display": "icon",
-                    "letter": "DEV",
-                    "icon": {
-                        "name": "code",
-                        "prefix": "fas",
-                        "label": "Code"
+                    "display": {
+                        "direction": "vertical",
+                        "order": "visualname",
+                        "alignment": "centercenter",
+                        "gutter": 2,
+                        "rotate": 0,
+                        "translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "visual": {
+                            "show": true,
+                            "type": "icon",
+                            "letter": {
+                                "size": 3,
+                                "text": "DEV"
+                            },
+                            "image": {
+                                "size": 3,
+                                "url": ""
+                            },
+                            "icon": {
+                                "size": 3,
+                                "name": "code",
+                                "prefix": "fas",
+                                "label": "Code"
+                            },
+                            "shadow": {
+                                "size": 0
+                            }
+                        },
+                        "name": {
+                            "show": true,
+                            "text": "Devdocs",
+                            "size": 0.9
+                        }
                     },
-                    "name": "Devdocs",
                     "url": "http://devdocs.io/",
                     "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
                         }
                     },
-                    "searchMatch": false,
-                    "timeStamp": 1546453101749
-                },
-                {
-                    "display": "icon",
-                    "letter": "AS",
-                    "icon": {
-                        "name": "dice-d20",
-                        "prefix": "fas",
-                        "label": "Dice D20"
+                    "color": {
+                        "by": "theme",
+                        "hsl": {
+                            "h": 0,
+                            "s": 0,
+                            "l": 0
+                        },
+                        "rgb": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        },
+                        "opacity": 1
                     },
-                    "name": "awesomeSheet",
-                    "url": "https://zombiefox.github.io/awesomeSheet/",
-                    "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
+                    "wide": false,
+                    "tall": false,
+                    "searchMatch": false,
+                    "timeStamp": 1546453101749,
+                    "background": {
+                        "show": false,
+                        "type": "image",
+                        "opacity": 1,
+                        "image": {
+                            "url": ""
+                        },
+                        "video": {
+                            "url": ""
                         }
-                    },
-                    "searchMatch": false,
-                    "timeStamp": 1546453104010
-                }
-            ]
-        },
-        {
-            "name": {
-                "text": "HCMUT",
-                "show": true
-            },
-            "openAll": {
-                "show": false
-            },
-            "items": [
-                {
-                    "display": "letter",
-                    "letter": "BKeL",
-                    "icon": {
-                        "name": null,
-                        "prefix": null,
-                        "label": null
-                    },
-                    "name": "E-Learning",
-                    "url": "http://e-learning.hcmut.edu.vn/my/",
-                    "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
-                        }
-                    },
-                    "searchMatch": false,
-                    "timeStamp": 1585726725182
-                },
-                {
-                    "display": "letter",
-                    "letter": "MyBK",
-                    "icon": {
-                        "name": null,
-                        "prefix": null,
-                        "label": null
-                    },
-                    "name": null,
-                    "url": "https://mybk.hcmut.edu.vn/stinfo/",
-                    "accent": {
-                        "override": false,
-                        "color": {
-                            "r": null,
-                            "g": null,
-                            "b": null
-                        }
-                    },
-                    "searchMatch": false,
-                    "timeStamp": 1585726801553
+                    }
                 }
             ]
         }
