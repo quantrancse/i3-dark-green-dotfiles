@@ -103,8 +103,25 @@ alias up-mirror="sudo pacman-mirrors --fasttrack && sudo pacman -Syyu"
 alias clpkg="sudo pacman -Rns $(pacman -Qdtq)"
 alias clram="sudo sh -c \"sync; echo 3 > /proc/sys/vm/drop_caches\""
 alias data="cd /mnt/DATA; ranger"
-
+alias fix-time="timedatectl set-ntp true"
+alias spotify="LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
 
 [[ -s /home/quantrancse/.autojump/etc/profile.d/autojump.sh ]] && source /home/quantrancse/.autojump/etc/profile.d/autojump.sh
 
 autoload -U compinit && compinit -u
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/quantrancse/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/quantrancse/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/quantrancse/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/quantrancse/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

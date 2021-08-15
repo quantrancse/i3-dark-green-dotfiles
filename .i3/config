@@ -193,6 +193,9 @@ bindsym $mod+Shift+9 move container to workspace $ws8; workspace $ws9
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
 
+# Open specific applications in fullscreen mode
+for_window [title="edex-ui"] fullscreen enable
+
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
@@ -280,12 +283,13 @@ bindsym $mod+F1 exec --no-startup-id lock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore
+exec_always picom
 # exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-exec --no-startup-id mpd
+# exec --no-startup-id mpd
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
@@ -295,6 +299,7 @@ exec --no-startup-id xautolock -time 30 -locker lock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id fcitx
+# exec --no-startup-id pulseeffects --gapplication-service 
 
 # Color palette used for the i3-sensible-terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -330,7 +335,7 @@ set_from_resource $term_color15    color15
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #31DAB9 #31DAB9 #80FFF9 #FDF6E3
+  client.focused          #31DAB9 #31DAB9 #2F3D44 #FDF6E3
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2

@@ -17,7 +17,7 @@
    * Values bellow are 'no-padding' ones for a size 60 (@icon-font) font, played around using this character: ■
    * We then add add 100 actual padding around the icons.
    *                                    -12px 0px   -19px -96px */
-  option-element-padding:               88px  100px 81px  4px;
+  option-element-padding:               88px  100px 76px  36px;
   option-3-window-padding:              415px 446px;
   option-3-listview-spacing:            140px;
   option-5-window-padding:              415px 183px;
@@ -32,7 +32,7 @@
   mpd-prompt-margin:                    0px 0px 0px -2px;
   mpd-element-border:                   12px;
   /* Every @option-element-padding minus @mpd-element-border */
-  mpd-element-padding:                  76px 88px 69px -16px;
+  mpd-element-padding:                  76px 88px 69px 66px;
   /* networkmenu */
   network-textbox-prompt-colon-padding: 14px 10px 10px 10px;
   /* nmvpnmenu */
