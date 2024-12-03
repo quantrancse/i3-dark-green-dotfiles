@@ -8,7 +8,8 @@ export ZSH="/home/quantrancse/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME=""
+SPACESHIP_BATTERY_SHOW=false
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,9 +69,10 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions kubectl)
 
 source $ZSH/oh-my-zsh.sh
+source /home/quantrancse/.profile
 
 # User configuration
 
@@ -101,10 +103,29 @@ source $ZSH/oh-my-zsh.sh
 alias up="sudo pacman -Syu"
 alias up-mirror="sudo pacman-mirrors --fasttrack && sudo pacman -Syyu"
 alias clpkg="sudo pacman -Rns $(pacman -Qdtq)"
-alias clram="sudo sh -c \"sync; echo 3 > /proc/sys/vm/drop_caches\""
+alias clram="sudo sh -c \"sync; echo 1 > /proc/sys/vm/drop_caches\""
 alias data="cd /mnt/DATA; ranger"
 alias fix-time="timedatectl set-ntp true"
 alias spotify="LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
+alias tty-clock="tty-clock -Ssc -C 4 -f \"%a, %d %b %Y\""
+alias btm="btm --color nord"
+alias neofetch="neofetch --ascii_distro arch"
+alias weather="curl wttr.in\\?1Fnq"
+alias lzd="lazydocker"
+alias lzg="lazygit"
+alias tt="tt -t 60 -theme nord -highlight1"
+alias ssh='TERM=xterm-256color ssh'
+
+alias ctm='code ~/Workspace/Novobi/Terraform/Terraform-Modules/'
+alias cts='code ~/Workspace/Novobi/Terraform/Terraform-OmniBorders-Staging/'
+alias cdb='code ~/Workspace/Novobi/Docker/Docker-Base/'
+alias rmt='rm -rf $(find . -type d -name .terragrunt-cache) $(find . -name .terraform.lock.hcl)'
+alias keys='ranger ~/Workspace/Novobi/Keys/project_ssh_keys'
+alias k='kubectl'
+alias tshl='tsh login --proxy=portal.novobi.com --user quan.tran@novobi.com'
+
+
+export BAT_THEME='Nord'
 
 [[ -s /home/quantrancse/.autojump/etc/profile.d/autojump.sh ]] && source /home/quantrancse/.autojump/etc/profile.d/autojump.sh
 
@@ -125,3 +146,32 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(starship init zsh)"
+
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export EDITOR=/usr/bin/vim
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+# fix "xdg-open fork-bomb" export your preferred browser from here
+export BROWSER=/usr/bin/vivaldi-stable
+export TERMINAL=/usr/bin/alacritty
+export SHELL=/usr/bin/zsh
+export PATH=$PATH:~/bin
+
+# setup fcitx
+export QT_IM_MODULE=fcitx
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
+setxkbmap -option caps:escape
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/quantrancse/.dart-cli-completion/zsh-config.zsh ]] && . /home/quantrancse/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]

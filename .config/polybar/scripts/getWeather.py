@@ -16,7 +16,7 @@
 import requests
 
 CITY = "1580578"
-API_KEY = "756edce7e9d4c385ef9499a53492678c"
+API_KEY = "5aff8410e3a62ce059fea50da7252f4b"
 UNITS = "Metric"
 UNIT_KEY = "C"
 #UNIT_KEY = "F"
