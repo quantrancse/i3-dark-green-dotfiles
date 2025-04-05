@@ -48,7 +48,7 @@
   prompt-window-border:                 2px;
   prompt-prompt-padding:                20px 30px;
   prompt-prompt-margin:                 8px;
-  prompt-listview-padding:              60px 114px 0px 114px;
+  prompt-listview-padding:              60px 114px 0px 144px;
   /* Values bellow are 'no-padding' ones for a size 18 (@prompt-text-font) font,
    * played around using this character: ■
    * We then add add 30 actual padding around the text.

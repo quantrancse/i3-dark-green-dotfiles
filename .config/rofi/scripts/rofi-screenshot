@@ -4,7 +4,7 @@
 # the active window. The image is then saved and copied to the clipboard.
 # Uses: date maim notify-send rofi xclip xdotool
 
-save_location="$HOME/Pictures/Screenshots"
+save_location="$HOME/Pictures/screenshots"
 screenshot_path="$save_location/$(date +'%Y-%m-%d-%H%M%S').png"
 
 screen=''
